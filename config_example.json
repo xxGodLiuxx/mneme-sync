@@ -1,0 +1,11 @@
+{
+  "mneme_folder_name": "Mneme_Documents",
+  "notion_database_url": "https://www.notion.so/YOUR_DATABASE_ID",
+  "notion_database_name": "Mneme - 思考トレースデータベース",
+  "dropbox_paths": [
+    "~/Dropbox",
+    "C:/Users/USERNAME/Dropbox",
+    "D:/Dropbox",
+    "E:/Dropbox"
+  ]
+}

@@ -1,0 +1,15 @@
+# Mneme specific
+.mneme_setup_complete
+.mneme_tools/
+
+# User-specific paths
+*_local.py
+local_config.json
+
+# Generated files
+Mneme_Notion用/
+*.bat
+
+# Cache
+__pycache__/
+*.pyc
