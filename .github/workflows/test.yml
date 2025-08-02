@@ -1,0 +1,35 @@
+name: Test Mneme Setup
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  test:
+    runs-on: windows-latest
+    
+    strategy:
+      matrix:
+        python-version: ['3.7', '3.8', '3.9', '3.10', '3.11']
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Test script syntax
+      run: |
+        python -m py_compile mneme_standalone_setup.py
+    
+    - name: Test with custom config
+      env:
+        MNEME_FOLDER_NAME: "Test_Documents"
+        MNEME_DATABASE_URL: "https://www.notion.so/test123"
+      run: |
+        python -c "import os; print(f'Folder: {os.environ.get(\"MNEME_FOLDER_NAME\")}')"
+        python -c "import os; print(f'URL: {os.environ.get(\"MNEME_DATABASE_URL\")}')"
