@@ -1,0 +1,15 @@
+{
+  "mneme_folder_name": "My_Knowledge_Base",
+  "notion_database_url": "https://www.notion.so/abcd1234567890",
+  "notion_database_name": "Personal Knowledge Management",
+  "dropbox_paths": [
+    "~/Dropbox",
+    "C:/Users/YourName/Dropbox",
+    "D:/Cloud/Dropbox",
+    "/mnt/c/Users/YourName/Dropbox"
+  ],
+  "claude_desktop": {
+    "auto_start": true,
+    "mcp_server": "filesystem"
+  }
+}
